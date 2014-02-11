@@ -2,7 +2,7 @@
 
 	abstract class Controller
 	{
-		abstarct public function index();
+		abstract public function index();
 	}
 
 ?>
