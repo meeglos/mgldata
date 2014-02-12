@@ -12,9 +12,9 @@
 	require_once APP_PATH . 'View.php';
 	require_once APP_PATH . 'Registro.php';
 
-	$r = new Request();
-	
-	echo $r->getControlador() . '<br>';
-	echo $r->getMetodo() . '<pre>';
-	print_r($r->getArgs());
+	try {
+		Bootstrap::run(new Request);
+	} catch(Exception $e) {
+		echo $e->getMessage();
+	}
 ?>
