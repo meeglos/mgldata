@@ -17,4 +17,8 @@
 	} catch(Exception $e) {
 		echo $e->getMessage();
 	}
+
+	/**
+	 * Added this comment line to test the branching and merging effects on git
+	 */
 ?>
