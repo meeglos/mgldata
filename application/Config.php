@@ -7,6 +7,12 @@
 	define('APP_NAME', 'Mi framework');
 	define('APP_SLOGAN', 'Primer framework PHP-MVC');
 	define('APP_COMPANY', 'miglos dev');
-		
+
+	define('DB_HOST', 'localhost');
+	define('DB_USER', 'miglos');
+	define('DB_PASS', 'm1glos');
+	define('DB_NAME', 'mgldata');
+	define('DB_CHAR', 'utf8');
+
 
 ?>
