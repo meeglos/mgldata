@@ -37,6 +37,37 @@
 				throw new Exception('Error de libreria');
 			}
 		}
+
+		protected function getTexto($clave)
+		{
+			if (isset($_POST[$clave]) && !empty($_POST[$clave])) {
+				$_POST[$clave] = htmlspecialchars($_POST[$clave], ENT_QUOTES);
+				return $_POST[$clave];
+			}
+
+			return '';
+		}
+
+	    protected function getInt($clave)
+	    {
+	        if(isset($_POST[$clave]) && !empty($_POST[$clave])){
+	            $_POST[$clave] = filter_input(INPUT_POST, $clave, FILTER_VALIDATE_INT);
+	            return $_POST[$clave];
+	        }
+	        
+	        return 0;
+	    }
+
+		protected function redireccionar($ruta = false)
+		{
+			if($ruta) {
+				header('location:' . BASE_URL . $ruta);
+				exit;
+			} else {
+				header('location:' . BASE_URL);
+				exit;
+			}
+		}
 	}
 	
 ?>

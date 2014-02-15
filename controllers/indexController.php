@@ -16,6 +16,7 @@
 			$this->_view->titulo = 'Portada';
 			$this->_view->renderizar('index', 'inicio');
 		}
+
 	}
 
  ?>
