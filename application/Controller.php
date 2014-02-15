@@ -68,6 +68,24 @@
 				exit;
 			}
 		}
+
+		protected function filtrarInt($int)
+		{
+			$int = (int) $int;
+
+			if (is_int($int)) {
+				return $int;
+			} else {
+				return 0;
+			}
+		}
+
+		protected function getPostParam($clave)
+		{
+			if (isset($_POST[$clave])) {
+				return $_POST[$clave];
+			}
+		}
 	}
 	
 ?>
