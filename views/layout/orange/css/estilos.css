@@ -1,0 +1,15 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #F00;
+	color: #f0f0f0;
+}
+
+#main {
+	width: 100%;
+	background: #F86C68;
+	border-bottom: 1px solid #FFF;
+}
