@@ -21,4 +21,8 @@
 
 <?php endif; ?>
 
-<p><a href="<?php BASE_URL; ?>post/nuevo">Agregar Post</a></p>
+<?php if(Session::accesoViewEstricto(array('usuario'), true)): ?>
+	
+	<p><a href="<?php BASE_URL; ?>post/nuevo">Agregar Post</a></p>
+
+<?php endif; ?>

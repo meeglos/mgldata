@@ -7,6 +7,7 @@
 	define('APP_NAME', 'Mi framework');
 	define('APP_SLOGAN', 'Primer framework PHP-MVC');
 	define('APP_COMPANY', 'miglos dev');
+	define('SESSION_TIME', 1);
 
 	define('DB_HOST', 'localhost');
 	define('DB_USER', 'miglos');
