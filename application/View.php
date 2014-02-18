@@ -21,12 +21,6 @@
 					),
 				
 				array(
-					'id' => 'contactos',
-					'titulo' => 'Contactos',
-					'enlace' => BASE_URL
-					),
-				
-				array(
 					'id' => 'post',
 					'titulo' => 'Post',
 					'enlace' => BASE_URL .'post'
@@ -36,14 +30,22 @@
 					'id' => 'servicios',
 					'titulo' => 'Servicios',
 					'enlace' => BASE_URL
-					),
-				
-				array(
-					'id' => 'ubicacion',
-					'titulo' => 'Ubicación',
-					'enlace' => BASE_URL
-					),
+					)
 				);
+
+			if (Session::get('autenticado')) {
+				$menu[] = array(
+					'id' => 'login',
+					'titulo' => 'Cerrar Sesion',
+					'enlace' => BASE_URL . 'login/cerrar'
+					);
+			} else {
+				$menu[] = array(
+					'id' => 'login',
+					'titulo' => 'Iniciar Sesion',
+					'enlace' => BASE_URL . 'login'
+					);
+			} 
 
 			$js =  array();
 
