@@ -211,3 +211,11 @@ a:hover {
 	position:relative;
 	top:1px;
 }
+
+#error {
+	color: #FF0000;
+	width: 80%;
+	border: 1px solid #FF0000;
+	padding: 2px 5px;
+	border-radius: 6px;
+}

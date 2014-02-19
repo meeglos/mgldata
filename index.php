@@ -14,6 +14,9 @@ try {
 	require_once APP_PATH . 'Registro.php';
 	require_once APP_PATH . 'Database.php';
 	require_once APP_PATH . 'Session.php';
+	require_once APP_PATH . 'Hash.php';
+
+//echo Hash::getHash('sha1', '1234', HASH_KEY);exit;
 
 	Session::init();
 

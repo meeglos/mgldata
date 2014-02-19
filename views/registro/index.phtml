@@ -1,0 +1,29 @@
+<h2>Registro de Usuario</h2>
+
+<form action="" name="form1" method="post">
+	
+	<input type="hidden" value="1" name="enviar">
+	<p>
+		<label for="">Nombre</label>
+		<input type="text" name="nombre" values="<?php if(isset($this->datos)) echo $this->datos['nombre']; ?>">
+	</p>
+	<p>
+		<label for="">Usuario</label>
+		<input type="text" name="usuario" values="<?php if(isset($this->datos)) echo $this->datos['usuario']; ?>">
+	</p>
+	<p>
+		<label for="">Email</label>
+		<input type="text" name="email" values="<?php if(isset($this->datos)) echo $this->datos['email']; ?>">
+	</p>
+	<p>
+		<label for="">Password</label>
+		<input type="password" name="pass">
+	</p>
+	<p>
+		<label for="">Confirmar</label>
+		<input type="password" name="confirmar">
+	</p>
+	<p>
+		<input type="submit" value="Enviar">
+	</p>
+</form>

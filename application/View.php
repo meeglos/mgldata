@@ -24,12 +24,6 @@
 					'id' => 'post',
 					'titulo' => 'Post',
 					'enlace' => BASE_URL .'post'
-				),
-				
-				array(
-					'id' => 'servicios',
-					'titulo' => 'Servicios',
-					'enlace' => BASE_URL
 					)
 				);
 
@@ -44,6 +38,12 @@
 					'id' => 'login',
 					'titulo' => 'Iniciar Sesion',
 					'enlace' => BASE_URL . 'login'
+					);
+
+				$menu[] = array(
+					'id' => 'registro',
+					'titulo' => 'Registro',
+					'enlace' => BASE_URL . 'registro'
 					);
 			} 
 
