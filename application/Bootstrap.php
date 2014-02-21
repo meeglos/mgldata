@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class Bootstrap
 {
@@ -8,7 +8,7 @@ class Bootstrap
         $rutaControlador = ROOT . 'controllers' . DS . $controller . '.php';
         $metodo = $peticion->getMetodo();
         $args = $peticion->getArgs();
-
+        
         if(is_readable($rutaControlador)){
             require_once $rutaControlador;
             $controller = new $controller;
@@ -28,12 +28,9 @@ class Bootstrap
             }
             
         } else {
-            throw new Exception('Error: Controlador no encontrado');
+            throw new Exception('no encontrado');
         }
     }
 }
-    /**
-     * Added this comment line to test the branching and merging effects on git
-     */
 
- ?>
+?>

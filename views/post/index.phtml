@@ -1,28 +1,31 @@
-<br><br>
-<h2>Ultimos posts</h2>
+<h2>Ultimos Posts</h2>
 
-<?php if (isset($this->posts) && count($this->posts)) : ?>
-	<table>
-		<?php for ($i = 0; $i < count($this->posts); $i++): ?>
+<?php if(isset($this->posts) && count($this->posts)) : ?>
 
-			<tr>
-				<td><?php echo $this->posts[$i]['post_id']; ?></td>
-				<td><?php echo $this->posts[$i]['titulo']; ?></td>
-				<td><?php echo $this->posts[$i]['cuerpo']; ?></td>
-				<td><a href="<?php echo BASE_URL . 'post/editar/' . $this->posts[$i]['post_id']; ?>">Editar</a></td>
-				<td><a href="<?php echo BASE_URL . 'post/eliminar/' . $this->posts[$i]['post_id']; ?>">Eliminar</a></td>
-			</tr>
+<table>
+    
+    <?php for($i = 0; $i < count($this->posts); $i++): ?>
+    
+    <tr>
+        <td><?php echo $this->posts[$i]['id']; ?></td>
+        <td><?php echo $this->posts[$i]['titulo']; ?></td>
+        <td><?php echo $this->posts[$i]['cuerpo']; ?></td>
+        <td><a href="<?php echo BASE_URL . 'post/editar/' . $this->posts[$i]['id']; ?>">Editar</a></td>
+        <td><a href="<?php echo BASE_URL . 'post/eliminar/' . $this->posts[$i]['id']; ?>">Eliminar</a></td>
+    </tr>
+    
+    <?php endfor;?>
+</table>
 
-		<?php endfor; ?>
-	</table>
 <?php else: ?>
 
-	<p><strong>No hay posts!</strong></p>
+<p><strong>No hay posts!</strong></p>
 
 <?php endif; ?>
 
-<?php if(Session::accesoViewEstricto(array('usuario'), true)): ?>
-	
-	<p><a href="<?php BASE_URL; ?>post/nuevo">Agregar Post</a></p>
+
+<?php if(Session::accesoViewEstricto(array('usuario'))): ?>
+
+<p><a href="<?php BASE_URL; ?>post/nuevo">Agregar Post</a></p>
 
 <?php endif; ?>
