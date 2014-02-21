@@ -19,9 +19,9 @@
 			return false;
 		}
 
-		public function verificarEmail($usuario)
+		public function verificarEmail($email)
 		{
-			$id = $this->_db_->query(
+			$id = $this->_db->query(
 				"select id from usuarios where email = '$email'"
 				);
 

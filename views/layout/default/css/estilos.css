@@ -219,3 +219,11 @@ a:hover {
 	padding: 2px 5px;
 	border-radius: 6px;
 }
+
+#mensaje {
+	color: #00FF66;
+	width: 80%;
+	border: 1px solid #00FF66;
+	padding: 2px 5px;
+	border-radius: 6px;
+}

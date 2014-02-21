@@ -45,6 +45,12 @@
 					$this->_view->renderizar('index','registro');
 					exit;
 				}
+				
+				if($this->_registro->verificarEmail($this->getPostParam('email'))) {					
+									$this->_view->_error = 'Esta direcci&oacute;n de correo ya existe.';
+									$this->_view->renderizar('index', 'registro');
+									exit;
+								}
 
 				if(!$this->getSql('pass')) {					
 					$this->_view->_error = 'Debe ingresar su password';
@@ -52,7 +58,7 @@
 					exit;
 				}
 				
-				if(!$this->getPostParam('pass') != $this->getPostParam('confirmar')) {					
+				if($this->getPostParam('pass') != $this->getPostParam('confirmar')) {					
 					$this->_view->_error = 'Los passwords nocoinciden';
 					$this->_view->renderizar('index', 'registro');
 					exit;
@@ -65,11 +71,14 @@
 					$this->getPostParam('email')
 					);
 
-				if($this->_registro->verificarUsuario($this->getAlphaNum('usuario'))) {
-					$this->_view->_mensaje = 'Registro Completado';
+				if(!$this->_registro->verificarUsuario($this->getAlphaNum('usuario'))) {
+					$this->_view->_error = 'Error al registrar el usuario';
 					$this->_view->renderizar('index', 'registro');
 					exit;
 				}
+
+				$this->_view->datos = false;
+				$this->_view->_mensaje = 'Registro Completado';
 			}
 
 			$this->_view->renderizar('index', 'registro');

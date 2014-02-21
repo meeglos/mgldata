@@ -55,9 +55,9 @@
                     <noscript><p>Para el correcto funcionamiento debe tener el soporte de javascript habilitado</p></noscript>
                     
                     <?php if(isset($this->_error)): ?>
-                    <div id="error"> echo $this->_error; ?></div>
+                        <div id="error"><?php echo $this->_error; ?></div>
                     <?php endif; ?>
 
-                    <?php if(isset($this->_error)): ?>
-                    <div id="mensaje"> echo $this->_mensaje; ?></div>
+                    <?php if(isset($this->_mensaje)): ?>
+                        <div id="mensaje"><?php echo $this->_mensaje; ?></div>
                     <?php endif; ?>
