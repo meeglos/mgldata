@@ -1,5 +1,13 @@
 <?php
 
+/** 
+ * @Author: miglos
+ * @Site:   https://github.com/meeglos
+ * @Date:   2014-02-11 02:13:40
+ * @Last Modified by:   miglos
+ * @Last Modified time: 2014-02-23 00:38:09
+ */
+
 ini_set('display_errors', 1);
 
 define('DS', DIRECTORY_SEPARATOR);
@@ -22,8 +30,7 @@ try{
     Session::init();
 
     Bootstrap::run(new Request);
-}
-catch(Exception $e){
+} catch(Exception $e) {
     echo $e->getMessage();
 }
 
